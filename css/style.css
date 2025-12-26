@@ -1,6 +1,271 @@
 @import url('reset.css');
 @import url('fonts.css');
-.first{
+
+*{
+    font-family: "Press Start 2P";
+}
+body{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    max-width: 1512px;
+    overflow-x: hidden;  
+    overflow-y: auto;
+    
+}
+.first{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 97px;
+    padding-left: 70px;
+    background-image: url('../images/t.png');
+    background-size: cover;          
+    background-position: center;
+    width: 100%;                     
+    height: 810px;  
+    position: relative;
+}  
+.border1{
+    display: flex;
+    background-image: url(../images/border1.svg);
+    align-items: center;
+    justify-content: flex-start;
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 172px;
+    color: #FFCD07;
+    
+    h1{
+        font-size: 65px;
+        padding-left: 43px;
+        padding-top: 25px;
+    }
+}
+.bus{
+    
+    position: absolute;
+    bottom: -30px;
+    left: -10%;
+    
+    animation: moveRightToLeft 3s infinite  linear;
+}
+@keyframes moveRightToLeft {
+    0% { 
+        transform: translateX(-30vw);     
+    }
+    90% { 
+        transform: translateX(10vw); 
+    }
+    100% { 
+        transform: translateX(-30vw);    
+    }
+}
+   
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 90px;
+    
+    h1{
+        font-size: 55px;
+    }
+}
+#start1{
+    animation: pulse 2s infinite ease-in-out;  
+}
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.08); 
+    }
+}
+
+.start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #00FA4D;
+    width: 481px;
+    height: 90px;
+    padding: 22px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+       
+}
+.start:hover {
+    animation-play-state: paused; 
+    transform: scale(1.1);       
+}
+.blackLine{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 75px;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+}
+.buses{
+    width: 500%;
+    display: flex;
+    animation: busesAnim 4s linear infinite;
+}
+
+@keyframes busesAnim{
+    0%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.second{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 872px; 
+    background-image: url('../images/second.png');
+
+}
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 160px;
+    padding-top: 10px;
+
+}
+.g1{
+    height: 336px;
+    width: 552px;
+}
+.location{
+    font-size: 55px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    color: #FFCD07;
+    animation: pulse 2s infinite ease-in-out;  
+}
+
+
+
+.footer{
+    background-color: #FF0000;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 40px;
+    padding-left: 55px;
+}
+.footer .time {
+    color: #FFCD07;
+}
+.footer .players {
+    color: #FFCD07;
+}
+
+.time::after {
+    content: attr(data-time);
+    animation: countDown 60s linear infinite;
+}
+.players::after {
+    content: attr(data-players);
+    animation: playersCountDown 60s linear infinite;
+}
+
+@keyframes countDown {
+    0% { content: "59"; }
+    1.7% { content: "58"; }
+    3.3% { content: "57"; }
+    5.0% { content: "56"; }
+    6.7% { content: "55"; }
+    8.3% { content: "54"; }
+    10.0% { content: "53"; }
+    11.7% { content: "52"; }
+    13.3% { content: "51"; }
+    15.0% { content: "50"; }
+    16.7% { content: "49"; }
+    18.3% { content: "48"; }
+    20.0% { content: "47"; }
+    21.7% { content: "46"; }
+    23.3% { content: "45"; }
+    25.0% { content: "44"; }
+    26.7% { content: "43"; }
+    28.3% { content: "42"; }
+    30.0% { content: "41"; }
+    31.7% { content: "40"; }
+    33.3% { content: "39"; }
+    35.0% { content: "38"; }
+    36.7% { content: "37"; }
+    38.3% { content: "36"; }
+    40.0% { content: "35"; }
+    41.7% { content: "34"; }
+    43.3% { content: "33"; }
+    45.0% { content: "32"; }
+    46.7% { content: "31"; }
+    48.3% { content: "30"; }
+    50.0% { content: "29"; }
+    51.7% { content: "28"; }
+    53.3% { content: "27"; }
+    55.0% { content: "26"; }
+    56.7% { content: "25"; }
+    58.3% { content: "24"; }
+    60.0% { content: "23"; }
+    61.7% { content: "22"; }
+    63.3% { content: "21"; }
+    65.0% { content: "20"; }
+    66.7% { content: "19"; }
+    68.3% { content: "18"; }
+    70.0% { content: "17"; }
+    71.7% { content: "16"; }
+    73.3% { content: "15"; }
+    75.0% { content: "14"; }
+    76.7% { content: "13"; }
+    78.3% { content: "12"; }
+    80.0% { content: "11"; }
+    81.7% { content: "10"; }
+    83.3% { content: "9"; }
+    85.0% { content: "8"; }
+    86.7% { content: "7"; }
+    88.3% { content: "6"; }
+    90.0% { content: "5"; }
+    91.7% { content: "4"; }
+    93.3% { content: "3"; }
+    95.0% { content: "2"; }
+    96.7% { content: "1"; }
+    98.3% { content: "0"; }
+    100% { content: "0"; }
+}
+@keyframes playersCountDown {
+    0% { content: "14"; }
+    7.1% { content: "13"; }
+    14.3% { content: "12"; }
+    21.4% { content: "11"; }
+    28.6% { content: "10"; }
+    35.7% { content: "9"; }
+    42.9% { content: "8"; }
+    50.0% { content: "7"; }
+    57.1% { content: "6"; }
+    64.3% { content: "5"; }
+    71.4% { content: "4"; }
+    78.6% { content: "3"; }
+    85.7% { content: "2"; }
+    92.9% { content: "1"; }
+    100% { content: "0"; }
 }
