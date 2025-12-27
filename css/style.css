@@ -165,9 +165,6 @@ body{
     color: #FFCD07;
     animation: pulse 2s infinite ease-in-out;  
 }
-
-
-
 .footer{
     background-color: #FF0000;
     width: 100%;
@@ -613,6 +610,6 @@ body{
     .third{
         background-image: url('../images/third2.png');
         background-repeat: no-repeat;
-        height: 750px;
+        height: 740px;
     }
 }    
