@@ -279,7 +279,6 @@ body{
     overflow: hidden;
 
 }
-/* Базовые позиции */
 .q1 { 
     position: absolute; 
     top: 48px;
@@ -529,10 +528,11 @@ body{
         height: 220px;
     }
     .location {
-        font-size: 30px;
+        font-size: 28px;
         padding: 30px 20px;
     }
     .footer {
+        height: 90px;
         font-size: 30px;
         padding-left: 30px;
         justify-content: center;
