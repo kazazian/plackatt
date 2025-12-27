@@ -379,7 +379,6 @@ body{
     42%  { top: 495px; left: 831px; }
     57%  { top: 570px; left: 90px; }      /* q8 */
     71%  { top: 120px; left: 175px; }     /* q9 */
-    85%  { top: 48px; left: 365px; }
     100% { top: 515px; left: 460px; }
 }
 
@@ -396,7 +395,6 @@ body{
 
 @keyframes q6Dynamic {
     0%   { top: 400px; left: 100px; }
-    14%  { top: 495px; left: 831px; }
     28%  { top: 570px; left: 90px; }      /* q8 */
     42%  { top: 120px; left: 175px; }     /* q9 */
     57%  { top: 48px; left: 365px; }
@@ -412,7 +410,6 @@ body{
     42%  { top: 48px; left: 365px; }
     57%  { top: 515px; left: 460px; }
     71%  { top: 166px; left: 864px; }
-    85%  { top: 364px; left: 576px; }
     100% { top: 541px; left: 1222px; }
 }
 
@@ -423,13 +420,11 @@ body{
     42%  { top: 515px; left: 460px; }
     57%  { top: 166px; left: 864px; }
     71%  { top: 364px; left: 576px; }
-    85%  { top: 541px; left: 1222px; }
     100% { top: 400px; left: 100px; }
 }
 
 @keyframes q9Dynamic {
     0%   { top: 120px; left: 175px; }
-    14%  { top: 48px; left: 365px; }
     28%  { top: 515px; left: 460px; }
     42%  { top: 166px; left: 864px; }
     57%  { top: 364px; left: 576px; }
