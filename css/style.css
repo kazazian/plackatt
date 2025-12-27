@@ -8,7 +8,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1512px;
+    max-width: 1920px;
     overflow-x: hidden;  
     overflow-y: auto;
     
@@ -70,6 +70,7 @@ body{
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    max-width: 500px;  
     padding-top: 90px;
     
     h1{
@@ -100,8 +101,10 @@ body{
     transform: scale(1);
     transition: transform 0.3s ease;
     transform-origin: center center;
+    box-sizing: border-box;
        
 }
+
 .start:hover {
     animation-play-state: paused; 
     transform: scale(1.1);       
@@ -269,3 +272,119 @@ body{
     92.9% { content: "1"; }
     100% { content: "0"; }
 }
+.third{
+    width: 100%;
+    height: 745px; 
+    background-image: url('../images/third.png');
+    position: relative; 
+    overflow: hidden;
+
+}
+.q1 {
+    position: absolute;
+    top: 30px;
+    left: 365px;
+}
+
+.q2 {
+    position: absolute;
+    top: 542px;
+    left: 460px;
+}
+
+.q3 {
+    position: absolute;
+    top: 166px;
+    left: 864px;
+}
+
+.q4 {
+    position: absolute;
+    top: 364px;
+    left: 576px;
+}
+
+.q5 {
+    position: absolute;
+    top: 541px;
+    left: 1222px;
+}
+@media (max-width: 475px) {
+    .first {
+        padding-top: 20px;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .border1 {
+        background-size: 85% 100%; 
+        height: 120px;
+        align-items: center;
+    }
+    
+    .border1 h1 {
+        font-size: 27px; 
+    }
+    
+    .bus {
+        bottom: 0px;
+        left: 0px;
+        animation-duration: 4s;
+    }
+    
+    .menu {
+        padding: 22px 20px;
+        gap: 25px;
+        width: 100%;
+        align-items: center;
+        width: fit-content;
+    }
+    
+    .menu h1 {
+        font-size: 30px;
+    }
+    
+    .start {
+        width: 280px;
+        height: 70px;
+        font-size: 22px;
+        padding: 15px;
+    }
+    .blackLine {
+        height: 50px;
+    }
+    
+    .second {
+        height: 630px;
+    }
+    
+    .row {
+        gap: 25px;
+        padding-top: 15px;
+    }
+    
+    .g1 {
+        width: 150px;
+        height: 236px;
+    }
+    
+    .location {
+        font-size: 32px;
+        padding: 25px 10px;
+        text-align: center;
+    }
+    
+    .footer {
+        height: 70px;
+        font-size: 24px;
+        padding-left: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .third{
+    
+        background-image: url('../images/third2.png');
+        background-repeat: no-repeat;
+    }
+
+}    
