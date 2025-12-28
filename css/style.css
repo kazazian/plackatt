@@ -434,6 +434,18 @@ body{
     85%  { top: 400px; left: 100px; }
     100% { top: 495px; left: 831px; }
 }
+@keyframes q4Mobile {
+    0% { top: 250px; left: 200px; }
+    60% { top: 20px; left: 50px; }
+    80% { top: 20px; left: 50px; }
+    100% { top: 250px; left: 200px; }
+}
+@keyframes q2Mobile {
+    0% { top: 380px; left: 80px; }
+    60% { top: 420px; left: 380px; }
+    80% { top: 420px; left: 380px; }
+    100% { top: 380px; left: 80px; }
+}
 
 @media (max-width: 1280px) {
     .border1 h1 {
@@ -620,4 +632,16 @@ body{
         background-repeat: no-repeat;
         height: 741px;
     }
+
+    
+    .q2-container {
+        top: 380px; left: 10px;
+        animation: q2Mobile 15s ease-in-out infinite;
+    }
+    
+    .q4-container {
+        top: 250px; left: 100px;
+        animation: q4Mobile 15s ease-in-out infinite;
+    }
+
 }    
