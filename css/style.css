@@ -13,7 +13,6 @@ body{
     max-width: 1920px;
     overflow-x: hidden;  
     overflow-y: auto;
-    
 }
 .first{
     display: flex;
@@ -37,7 +36,6 @@ body{
     width: 100%;
     height: 172px;
     color: #FFCD07;
-    
     h1{
         font-size: 65px;
         padding-left: 43px;
@@ -45,11 +43,9 @@ body{
     }
 }
 .bus{
-    
     position: absolute;
     bottom: -30px;
     left: -10%;
-    
     animation: moveRightToLeft 3s infinite  linear;
 }
 @keyframes moveRightToLeft {
@@ -63,8 +59,6 @@ body{
         transform: translateX(-500px);    
     }
 }
-   
-
 .menu{
     display: flex;
     flex-direction: column;
@@ -74,7 +68,6 @@ body{
     width: 100%;
     max-width: 500px;  
     padding-top: 90px;
-    
     h1{
         font-size: 55px;
     }
@@ -90,7 +83,6 @@ body{
         transform: scale(1.08); 
     }
 }
-
 .start{
     display: flex;
     align-items: center;
@@ -103,10 +95,8 @@ body{
     transform: scale(1);
     transition: transform 0.3s ease;
     transform-origin: center center;
-    box-sizing: border-box;
-       
+    box-sizing: border-box;    
 }
-
 .start:hover {
     animation-play-state: paused; 
     transform: scale(1.1);       
@@ -140,17 +130,13 @@ body{
     width: 100%;
     height: 872px; 
     background-image: url('../images/second.png');
-
 }
-
-
 .row{
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 160px;
     padding-top: 10px;
-
 }
 .g1{
     height: 336px;
@@ -181,7 +167,6 @@ body{
 .footer .players {
     color: #FFCD07;
 }
-
 .time::after {
     content: attr(data-time);
     animation: countDown 60s linear infinite;
@@ -273,35 +258,36 @@ body{
 }
 .third{
     width: 100%;
-    height: 745px; 
+    height: 741px; 
     background-image: url('../images/third.png');
     position: relative; 
     overflow: hidden;
-
 }
-.q1 { 
-    position: absolute; 
-    top: 48px;
-    left: 365px;
-    animation: q1Dynamic 15s ease-in-out infinite; animation-delay: 1.5s;
-}
-.q2 { 
+.q1-container {
     position: absolute;
-     top: 515px;
-     left: 460px; 
-     animation: q2Dynamic 15s ease-in-out infinite; 
+    top: 48px; left: 365px;
+    animation: q1Dynamic 15s ease-in-out infinite;
+    animation-delay: 1.5s;
 }
-.q3 {
-     position: absolute; 
-     top: 166px; 
-     left: 864px; 
-     animation: q3Dynamic 15s ease-in-out infinite; 
-    }
-.q4 { 
-    position: absolute; 
-    top: 364px; 
-    left: 576px; 
-    animation: q4Dynamic 15s ease-in-out infinite; animation-delay: 1.5s;
+
+.q2-container {
+    position: absolute;
+    top: 515px; left: 460px;
+    animation: q2Dynamic 15s ease-in-out infinite;
+}
+
+.q3-container {
+    position: absolute;
+    top: 166px; left: 864px;
+    animation: q3Dynamic 15s ease-in-out infinite;
+}
+
+.q4-container {
+    position: absolute;
+    top: 364px;
+    left: 576px;
+    animation: q4Dynamic 15s ease-in-out infinite;
+    animation-delay: 1.5s;
 }
 .q5 { 
     position: absolute; 
@@ -333,62 +319,89 @@ body{
     left: 175px;
     animation: q9Dynamic 15s ease-in-out infinite; animation-delay: 1.5s;
 }
+.detector {
+    position: absolute;
+}
+
+.detector .detected-text {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FF0000;
+    font-family: "Press Start 2P";
+    font-size: 20px;
+    animation: blink 1.5s infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.detector.stopped .detected-text {
+    opacity: 1;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0 }
+}
+
 @keyframes q1Dynamic {
     0%   { top: 48px; left: 365px; }
-    14%  { top: 515px; left: 460px; }
-    28%  { top: 166px; left: 864px; }
-    42%  { top: 364px; left: 576px; }
-    57%  { top: 541px; left: 1222px; }
-    71%  { top: 400px; left: 100px; }
-    92%  { top: 570px; left: 90px; }     
-    100% { top: 120px; left: 175px; }    
+    10%  { top: 515px; left: 460px; }
+    20%  { top: 166px; left: 864px; }
+    25%  { top: 364px; left: 576px; }  
+    45%  { top: 364px; left: 576px; } 
+    60%  { top: 400px; left: 100px; }
+    70%  { top: 495px; left: 831px; }
+    75%  { top: 570px; left: 90px; }  
+    95%  { top: 570px; left: 90px; }   
+    100% { top: 120px; left: 175px; }
 }
 
 @keyframes q2Dynamic {
     0%   { top: 515px; left: 460px; }
-    14%  { top: 166px; left: 864px; }
-    28%  { top: 364px; left: 576px; }
-    42%  { top: 541px; left: 1222px; }
-    57%  { top: 400px; left: 100px; }
-    71%  { top: 495px; left: 831px; }
-    85%  { top: 570px; left: 90px; }   
-    92%  { top: 120px; left: 175px; }    
+    25%  { top: 364px; left: 576px; }  
+    45%  { top: 364px; left: 576px; }
+    50%  { top: 541px; left: 1222px; }
+    60%  { top: 400px; left: 100px; }
+    75%  { top: 570px; left: 90px; }  
+    95%  { top: 570px; left: 90px; }
     100% { top: 48px; left: 365px; }
 }
 
 @keyframes q3Dynamic {
     0%   { top: 166px; left: 864px; }
-    28%  { top: 541px; left: 1222px;}
-    42%  { top: 400px; left: 100px; }
-    57%  { top: 495px; left: 831px; }
-    71%  { top: 570px; left: 90px; }    
-    85%  { top: 120px; left: 175px; }   
+    20%  { top: 541px; left: 1222px; }
+    30%  { top: 400px; left: 100px; }
+    40%  { top: 495px; left: 831px; } 
+    60%  { top: 495px; left: 831px; }
+    85%  { top: 120px; left: 175px; }  
     100% { top: 48px; left: 365px; }
 }
 
 @keyframes q4Dynamic {
     0%   { top: 364px; left: 576px; }
-    14%  { top: 541px; left: 1222px; }
-    28%  { top: 400px; left: 100px; }
-    42%  { top: 495px; left: 831px; }
-    57%  { top: 570px; left: 90px; }     
-    71%  { top: 120px; left: 175px; }    
+    15%  { top: 541px; left: 1222px; }
+    25%  { top: 400px; left: 100px; }
+    35%  { top: 570px; left: 90px; }  
+    55%  { top: 570px; left: 90px; }
+    75%  { top: 48px; left: 365px; }   
+    95%  { top: 48px; left: 365px; }
     100% { top: 515px; left: 460px; }
 }
-
 @keyframes q5Dynamic {
     0%   { top: 541px; left: 1222px; }
     14%  { top: 400px; left: 100px; }
     28%  { top: 495px; left: 831px; }
-    42%  { top: 570px; left: 90px; }     
-    57%  { top: 120px; left: 175px; }   
+    42%  { top: 570px; left: 90px; }
+    57%  { top: 120px; left: 175px; }
     71%  { top: 48px; left: 365px; }
     100% { top: 166px; left: 864px; }
 }
 
 @keyframes q6Dynamic {
-    0%   { top: 400px; left: 100px; }     
-    42%  { top: 120px; left: 175px; }   
+    0%   { top: 400px; left: 100px; }
+    42%  { top: 120px; left: 175px; }
     57%  { top: 48px; left: 365px; }
     71%  { top: 515px; left: 460px; }
     85%  { top: 166px; left: 864px; }
@@ -397,15 +410,15 @@ body{
 
 @keyframes q7Dynamic {
     0%   { top: 495px; left: 831px; }
-    14%  { top: 570px; left: 90px; }      
-    28%  { top: 120px; left: 175px; }     
+    14%  { top: 570px; left: 90px; }
+    28%  { top: 120px; left: 175px; }
     42%  { top: 48px; left: 365px; }
     57%  { top: 515px; left: 460px; }
     100% { top: 541px; left: 1222px; }
 }
 
 @keyframes q8Dynamic {
-    0%   { top: 570px; left: 90px; }    
+    0%   { top: 570px; left: 90px; }
     28%  { top: 48px; left: 365px; }
     42%  { top: 515px; left: 460px; }
     57%  { top: 166px; left: 864px; }
@@ -423,7 +436,6 @@ body{
 }
 
 @media (max-width: 1280px) {
-    
     .border1 h1 {
         font-size: 52px;
         
@@ -477,31 +489,26 @@ body{
         align-items: center;
         height: 850px;
     }
-    
     .border1 {
         height: 150px;
         background-size: contain;
         background-position: center;
         justify-content: center;
     }
-    
     .border1 h1 {
         font-size: 42px;
         padding: 25px 0 0 0;
     }
-    
     .bus {
         width: 1600px;
         bottom: -25px;
         left: 20;
         animation: busTabletAnim 3s linear infinite;
     }
-    
     @keyframes busTabletAnim {
         0% { transform: translateX(0); }
         100% { transform: translateX(-1550px); }
     }
-    
     .menu {
         padding-top: 60px;
         gap: 22px;
@@ -550,7 +557,8 @@ body{
         align-items: center;
     }
     .border1 h1 {
-        font-size: 27px; 
+        font-size: 30px; 
+        padding-top: 15px;
     }
      .bus {
         position: absolute;
