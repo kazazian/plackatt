@@ -113,7 +113,7 @@ body{
 .buses{
     width: 500%;
     display: flex;
-    animation: busesAnim 4s linear infinite;
+    animation: busesAnim 6s linear infinite;
 }
 
 @keyframes busesAnim{
@@ -264,26 +264,25 @@ body{
     overflow: hidden;
 }
 .q1-container {
-    position: absolute;
-    top: 48px; left: 365px;
+    top: 48px; 
+    left: 365px;
     animation: q1Dynamic 15s ease-in-out infinite;
     animation-delay: 1.5s;
 }
 
 .q2-container {
-    position: absolute;
-    top: 515px; left: 460px;
+    top: 515px; 
+    left: 460px;
     animation: q2Dynamic 15s ease-in-out infinite;
 }
 
 .q3-container {
-    position: absolute;
-    top: 166px; left: 864px;
+    top: 166px; 
+    left: 864px;
     animation: q3Dynamic 15s ease-in-out infinite;
 }
 
 .q4-container {
-    position: absolute;
     top: 364px;
     left: 576px;
     animation: q4Dynamic 15s ease-in-out infinite;
@@ -326,10 +325,9 @@ body{
 .detector .detected-text {
     position: absolute;
     bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+ 
     color: #FF0000;
-    font-family: "Press Start 2P";
     font-size: 20px;
     animation: blink 1.5s infinite;
     opacity: 0;
@@ -434,17 +432,32 @@ body{
     85%  { top: 400px; left: 100px; }
     100% { top: 495px; left: 831px; }
 }
-@keyframes q4Mobile {
-    0% { top: 250px; left: 200px; }
-    60% { top: 20px; left: 50px; }
-    80% { top: 20px; left: 50px; }
-    100% { top: 250px; left: 200px; }
+@keyframes q1Mobile {
+    0% { top: 20px; left: 50px; }
+    55% { top: 250px; left: 200px; }
+    75% { top: 250px; left: 200px; }
+    100% { top: 20px; left: 50px; }
 }
+
 @keyframes q2Mobile {
     0% { top: 380px; left: 80px; }
-    60% { top: 420px; left: 380px; }
-    80% { top: 420px; left: 380px; }
+    60% { top: 420px; left: 280px; }
+    80% { top: 420px; left: 280px; }
     100% { top: 380px; left: 80px; }
+}
+
+@keyframes q3Mobile {
+    0% { top: 60px; left: 310px; }
+    65% { top: 440px; left: 20px; }
+    85% { top: 440px; left: 20px; }
+    100% { top: 60px; left: 310px; }
+}
+
+@keyframes q4Mobile {
+    0% { top: 250px; left: 200px; }
+    60% { top: 70px; left: 40px; }
+    80% { top: 90px; left: 45px; }
+    100% { top: 250px; left: 200px; }
 }
 
 @media (max-width: 1280px) {
@@ -633,15 +646,40 @@ body{
         height: 741px;
     }
 
+    .q5 {
+        display: none !important;
+    }
+    .q6 {
+        display: none !important;
+    }
+    .q7{
+        display: none !important;
+    }
+    .q8 {
+        display: none !important;
+    }
+     .q9 {
+        display: none !important;
+    }
+
+    .q1-container {
+        top: 20px; left: 50px;
+        animation: q1Mobile 10s ease-in-out infinite;
+    }
     
     .q2-container {
-        top: 380px; left: 10px;
-        animation: q2Mobile 15s ease-in-out infinite;
+        top: 380px; left: 80px;
+        animation: q2Mobile 10s ease-in-out infinite;
+    }
+    
+    .q3-container {
+        top: 100px; left: 150px;
+        animation: q3Mobile 10s ease-in-out infinite;
     }
     
     .q4-container {
-        top: 250px; left: 100px;
-        animation: q4Mobile 15s ease-in-out infinite;
+        top: 250px; left: 10px;
+        animation: q4Mobile 10s ease-in-out infinite;
     }
 
-}    
+}   
